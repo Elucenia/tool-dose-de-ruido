@@ -1,0 +1,144 @@
+[
+  {
+    "label": "90 dB(A) por 4 h: dose 1,0 (no limite, sem exceder)",
+    "input": {
+      "n1": 90,
+      "t1": 4
+    },
+    "expected": {
+      "raw": {
+        "dose": 1
+      },
+      "main": "100",
+      "level": "mid",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "n1": 90,
+      "t1": 4
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "90 dB(A) por 4 h + 95 dB(A) por 2 h: dose 2,0",
+    "input": {
+      "n1": 90,
+      "t1": 4,
+      "n2": 95,
+      "t2": 2
+    },
+    "expected": {
+      "raw": {
+        "dose": 2
+      },
+      "level": "high",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "n1": 90,
+      "t1": 4,
+      "n2": 95,
+      "t2": 2
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "93 dB(A) por 1 h + 85 dB(A) por 4 h: 1/2,667 + 4/8 = 0,875",
+    "input": {
+      "n1": 93,
+      "t1": 1,
+      "n2": 85,
+      "t2": 4
+    },
+    "expected": {
+      "raw": {
+        "dose": 0.875
+      },
+      "level": "mid",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "n1": 93,
+      "t1": 1,
+      "n2": 85,
+      "t2": 4
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "86,5 dB(A) por 3 h: usa o nível 87 (6 h): dose 0,5",
+    "input": {
+      "n1": 86.5,
+      "t1": 3
+    },
+    "expected": {
+      "raw": {
+        "dose": 0.5
+      },
+      "level": "mid",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "n1": 86.5,
+      "t1": 3
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "97 dB(A) por 1,25 h: usa o nível 98 (1 h 15 min): dose 1,0",
+    "input": {
+      "n1": 97,
+      "t1": 1.25
+    },
+    "expected": {
+      "raw": {
+        "dose": 1
+      },
+      "tol": 0.001
+    },
+    "originalInput": {
+      "n1": 97,
+      "t1": 1.25
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "88 dB(A) por 2 h e 80 dB(A) por 6 h: dose 0,4",
+    "input": {
+      "n1": 88,
+      "t1": 2,
+      "n2": 80,
+      "t2": 6
+    },
+    "expected": {
+      "raw": {
+        "dose": 0.4
+      },
+      "level": "low",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "n1": 88,
+      "t1": 2,
+      "n2": 80,
+      "t2": 6
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "118 dB(A) por 10 min: risco grave e iminente",
+    "input": {
+      "n1": 118,
+      "t1": 0.17
+    },
+    "expected": {
+      "level": "high",
+      "verdict": "grave e iminente"
+    },
+    "originalInput": {
+      "n1": 118,
+      "t1": 0.17
+    },
+    "expandedZeroOptions": []
+  }
+]

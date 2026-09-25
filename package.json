@@ -1,0 +1,19 @@
+{
+  "name": "@elucenia/tool-dose-de-ruido",
+  "version": "0.1.0",
+  "description": "Dose de ruído (NR-15, Anexo 1)",
+  "main": "calculator.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Elucenia/tool-dose-de-ruido.git"
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "tool": {
+    "id": "dose-de-ruido",
+    "title": "Dose de ruído (NR-15, Anexo 1)",
+    "short": "Soma C/T da exposição diária a ruído contínuo",
+    "spec": [
+      "medicina-do-trabalho",
+      "otorrinolaringologia"
+    ],
+    "tier": 1,
+    "desc": "Calcule a dose diária de ruído contínuo ou intermitente pela soma C1/T1 + C2/T2 + … do Anexo 1 da NR-15, com a tabela de máxima exposição diária permissível.",
+    "lead": "Soma os efeitos de vários períodos de exposição a níveis de ruído diferentes na jornada e compara com o limite de tolerância da NR-15.",
+    "fields": [
+      [
+        "n1",
+        "Período 1: nível de ruído",
+        "num",
+        {
+          "min": 60,
+          "max": 140,
+          "step": 0.1,
+          "unit": "dB(A)",
+          "ph": "90"
+        }
+      ],
+      [
+        "t1",
+        "Período 1: tempo de exposição",
+        "num",
+        {
+          "min": 0,
+          "max": 24,
+          "step": 0.01,
+          "unit": "h",
+          "ph": "4"
+        }
+      ],
+      [
+        "n2",
+        "Período 2: nível de ruído",
+        "num",
+        {
+          "min": 60,
+          "max": 140,
+          "step": 0.1,
+          "unit": "dB(A)",
+          "opt": true
+        }
+      ],
+      [
+        "t2",
+        "Período 2: tempo de exposição",
+        "num",
+        {
+          "min": 0,
+          "max": 24,
+          "step": 0.01,
+          "unit": "h",
+          "opt": true
+        }
+      ],
+      [
+        "n3",
+        "Período 3: nível de ruído",
+        "num",
+        {
+          "min": 60,
+          "max": 140,
+          "step": 0.1,
+          "unit": "dB(A)",
+          "opt": true
+        }
+      ],
+      [
+        "t3",
+        "Período 3: tempo de exposição",
+        "num",
+        {
+          "min": 0,
+          "max": 24,
+          "step": 0.01,
+          "unit": "h",
+          "opt": true
+        }
+      ],
+      [
+        "n4",
+        "Período 4: nível de ruído",
+        "num",
+        {
+          "min": 60,
+          "max": 140,
+          "step": 0.1,
+          "unit": "dB(A)",
+          "opt": true
+        }
+      ],
+      [
+        "t4",
+        "Período 4: tempo de exposição",
+        "num",
+        {
+          "min": 0,
+          "max": 24,
+          "step": 0.01,
+          "unit": "h",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>Dose = C<sub>1</sub>/T<sub>1</sub> + C<sub>2</sub>/T<sub>2</sub> + … + C<sub>n</sub>/T<sub>n</sub></strong>, em que C é o tempo total de exposição a um nível e T é a máxima exposição diária permissível a esse nível (Quadro do Anexo 1). Se a soma exceder 1 (100%), a exposição está acima do limite de tolerância.</p><p>Níveis intermediários usam o tempo do nível imediatamente mais elevado do Quadro (item 4). Tempo em horas decimais: 30 min = 0,5 h; 15 min = 0,25 h.</p>",
+    "table": [
+      [
+        "Nível dB(A)",
+        "Máxima exposição diária",
+        "Nível dB(A)",
+        "Máxima exposição diária"
+      ],
+      [
+        "85",
+        "8 horas",
+        "96",
+        "1 h 45 min"
+      ],
+      [
+        "86",
+        "7 horas",
+        "98",
+        "1 h 15 min"
+      ],
+      [
+        "87",
+        "6 horas",
+        "100",
+        "1 hora"
+      ],
+      [
+        "88",
+        "5 horas",
+        "102",
+        "45 minutos"
+      ],
+      [
+        "89",
+        "4 h 30 min",
+        "104",
+        "35 minutos"
+      ],
+      [
+        "90",
+        "4 horas",
+        "105",
+        "30 minutos"
+      ],
+      [
+        "91",
+        "3 h 30 min",
+        "106",
+        "25 minutos"
+      ],
+      [
+        "92",
+        "3 horas",
+        "108",
+        "20 minutos"
+      ],
+      [
+        "93",
+        "2 h 40 min",
+        "110",
+        "15 minutos"
+      ],
+      [
+        "94",
+        "2 h 15 min",
+        "112",
+        "10 minutos"
+      ],
+      [
+        "95",
+        "2 horas",
+        "114 / 115",
+        "8 / 7 minutos"
+      ]
+    ],
+    "table_note": "Quadro do Anexo 1 da NR-15. Acima de 115 dB(A) não é permitida exposição sem proteção adequada (risco grave e iminente).",
+    "tips": [
+      "O critério da NR-15 usa incremento de duplicação de dose <strong>q = 5 dB</strong>. A NHO 01 da Fundacentro, usada no PGR e no controle preventivo, usa <strong>q = 3 dB</strong> e dá doses maiores para o mesmo registro: não misture os critérios no mesmo laudo.",
+      "Dose de 0,5 (50%) é o nível de ação usual: a partir daí, inclua o trabalhador no programa de conservação auditiva, com audiometria (NR-7) e controle da exposição.",
+      "A medição é feita próximo ao ouvido, em curva de compensação A e resposta lenta (slow). Ruído de impacto segue o Anexo 2, com outros limites.",
+      "Protetor auricular reduz a exposição real, mas, para aposentadoria especial, o STF (ARE 664.335, 2014) decidiu que a declaração de EPI eficaz não descaracteriza o tempo especial por ruído acima do limite.",
+      "Na perícia de perda auditiva induzida por ruído, correlacione a dose com o padrão audiométrico (entalhe em 3 a 6 kHz, bilateral e simétrico) e o tempo de exposição."
+    ],
+    "sources": [
+      [
+        "Brasil. Ministério do Trabalho e Emprego. Norma Regulamentadora nº 15 (NR-15): Atividades e Operações Insalubres, com o Anexo 3 alterado pela Portaria SEPRT nº 1.359/2019.",
+        "https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/participacao-social/conselhos-e-orgaos-colegiados/comissao-tripartite-partitaria-permanente/normas-regulamentadora/normas-regulamentadoras-vigentes/norma-regulamentadora-no-15-nr-15"
+      ],
+      [
+        "Fundacentro. Norma de Higiene Ocupacional NHO 01: Avaliação da exposição ocupacional ao ruído, 2001.",
+        "https://cursos-eventos.fundacentro.gov.br/biblioteca/normas-de-higiene-ocupacional/publicacao/detalhe/2012/9/nho-01-procedimento-tecnico-avaliacao-da-exposicao-ocupacional-ao-ruido"
+      ]
+    ],
+    "cases": [
+      [
+        "90 dB(A) por 4 h: dose 1,0 (no limite, sem exceder)",
+        {
+          "n1": 90,
+          "t1": 4
+        },
+        {
+          "raw": {
+            "dose": 1
+          },
+          "main": "100",
+          "level": "mid",
+          "tol": 0.001
+        }
+      ],
+      [
+        "90 dB(A) por 4 h + 95 dB(A) por 2 h: dose 2,0",
+        {
+          "n1": 90,
+          "t1": 4,
+          "n2": 95,
+          "t2": 2
+        },
+        {
+          "raw": {
+            "dose": 2
+          },
+          "level": "high",
+          "tol": 0.001
+        }
+      ],
+      [
+        "93 dB(A) por 1 h + 85 dB(A) por 4 h: 1/2,667 + 4/8 = 0,875",
+        {
+          "n1": 93,
+          "t1": 1,
+          "n2": 85,
+          "t2": 4
+        },
+        {
+          "raw": {
+            "dose": 0.875
+          },
+          "level": "mid",
+          "tol": 0.001
+        }
+      ],
+      [
+        "86,5 dB(A) por 3 h: usa o nível 87 (6 h): dose 0,5",
+        {
+          "n1": 86.5,
+          "t1": 3
+        },
+        {
+          "raw": {
+            "dose": 0.5
+          },
+          "level": "mid",
+          "tol": 0.001
+        }
+      ],
+      [
+        "97 dB(A) por 1,25 h: usa o nível 98 (1 h 15 min): dose 1,0",
+        {
+          "n1": 97,
+          "t1": 1.25
+        },
+        {
+          "raw": {
+            "dose": 1
+          },
+          "tol": 0.001
+        }
+      ],
+      [
+        "88 dB(A) por 2 h e 80 dB(A) por 6 h: dose 0,4",
+        {
+          "n1": 88,
+          "t1": 2,
+          "n2": 80,
+          "t2": 6
+        },
+        {
+          "raw": {
+            "dose": 0.4
+          },
+          "level": "low",
+          "tol": 0.001
+        }
+      ],
+      [
+        "118 dB(A) por 10 min: risco grave e iminente",
+        {
+          "n1": 118,
+          "t1": 0.17
+        },
+        {
+          "level": "high",
+          "verdict": "grave e iminente"
+        }
+      ]
+    ],
+    "batch": "saude-coletiva",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "saude-coletiva",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/saude-coletiva.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 7,
+      "passed": 7,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/saude-coletiva.php",
+    "sha256": "5f081943f8faff99f4a6ac07fc16af6d7f8e6aa64d874af2d00ed8bae97da6a2",
+    "bytes": 77577
+  },
+  "clinicalValidation": "not-performed"
+}
