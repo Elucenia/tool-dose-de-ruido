@@ -7,7 +7,7 @@ Identificador: `dose-de-ruido`. Pacote independente da plataforma Elucenia, para
 - Revisão: **needs-review**. Revisão documental e clínica independente pendente.
 - Execução: **disponível para reprodução técnica da fórmula**.
 - Validação clínica independente: **não realizada**. Os testes abaixo verificam aritmética e transporte dos campos.
-- 7 casos de referência em `examples.json`, conferidos por `test.cjs`. Verificação aritmética independente da fórmula (reimplementação a partir da literatura, entradas aleatórias): **pendente**.
+- 7 casos de referência em `examples.json`, conferidos por `test.cjs`. Verificação aritmética independente da fórmula (reimplementação a partir da literatura, entradas aleatórias): **realizada em 2026-09-25**, 40 comparações conformes.
 - Dados: o exemplo funciona localmente, sem rede, armazenamento ou identificação de pacientes.
 
 ## Uso no Node.js
