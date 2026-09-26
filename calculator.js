@@ -1,11 +1,11 @@
-/* tool-dose-de-ruido · Elucenia · https://github.com/Elucenia/tool-dose-de-ruido
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-dose-de-ruido · ELUCENIA · https://github.com/Elucenia/tool-dose-de-ruido
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"dose-de-ruido","title":"Dose de ruído (NR-15, Anexo 1)","fields":[["n1","Período 1: nível de ruído","num",{"min":60,"max":140,"step":0.1,"unit":"dB(A)","ph":"90"}],["t1","Período 1: tempo de exposição","num",{"min":0,"max":24,"step":0.01,"unit":"h","ph":"4"}],["n2","Período 2: nível de ruído","num",{"min":60,"max":140,"step":0.1,"unit":"dB(A)","opt":true}],["t2","Período 2: tempo de exposição","num",{"min":0,"max":24,"step":0.01,"unit":"h","opt":true}],["n3","Período 3: nível de ruído","num",{"min":60,"max":140,"step":0.1,"unit":"dB(A)","opt":true}],["t3","Período 3: tempo de exposição","num",{"min":0,"max":24,"step":0.01,"unit":"h","opt":true}],["n4","Período 4: nível de ruído","num",{"min":60,"max":140,"step":0.1,"unit":"dB(A)","opt":true}],["t4","Período 4: tempo de exposição","num",{"min":0,"max":24,"step":0.01,"unit":"h","opt":true}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

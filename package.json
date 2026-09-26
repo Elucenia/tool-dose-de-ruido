@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-dose-de-ruido",
   "version": "0.1.0",
-  "description": "Dose de ruído (NR-15, Anexo 1) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "Dose de ruído (NR-15, Anexo 1) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
